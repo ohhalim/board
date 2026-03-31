@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Getter
-
 @Table(name = "articles") 
 @NoArgsConstructor
 public class ArticleEntity {
@@ -27,8 +26,9 @@ public class ArticleEntity {
     @Column(nullable = false)
     private String content;
 
-    public ArticleEntity(String title, String content) { // title(제목)과 content(내용)를 입력받아 새로운 엔티티를 초기화하는 공개(public) 생성자입니다.
-        this.title = title; // 이 인스턴스의 title(제목) 필드에 매개변수로 입력받은 title(제목) 값을 할당합니다.
-        this.content = content; // 이 인스턴스의 content(내용) 필드에 매개변수로 입력받은 content(내용) 값을 할당합니다.
+    public ArticleEntity(String title, String content) {
+        this.title = title;
+        this.content = content;
     }
+
 }
